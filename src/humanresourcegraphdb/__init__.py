@@ -27,7 +27,7 @@ CREATE
 (fin1: Employee {name: "Emma", role: "Finance Analyst"}),
 (ehead)-[:REPORTS_TO]->(ceo),
 (dhead)-[:REPORTS_TO]->(ceo),
-(en1)-[:REPORTS_TO]->(ehead),
+(eng1)-[:REPORTS_TO]->(ehead),
 (data1)-[:REPORTS_TO]->(dhead),
 (fin1)-[:REPORTS_TO]->(ceo),
 (ehead)-[:WORKS_IN]->(eng),
@@ -36,6 +36,7 @@ CREATE
 (data1)-[:WORKS_IN]->(data),
 (fin1)-[:WORKS_IN]->(fin)
 """
+
 
 driver.execute_query(query, database=NEO4J_DATABASE)
 print("Company Org chart created successfully")
